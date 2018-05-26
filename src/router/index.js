@@ -13,4 +13,10 @@ const router = new Router({
   mode: 'history',
   routes
 });
+
+//页面跳转前置判断
+router.beforeEach((to, from, next) => {
+  next();
+});
+
 export default router

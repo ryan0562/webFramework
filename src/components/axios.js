@@ -4,7 +4,6 @@ import $http from 'axios'
 
 //添加一个请求拦截器
 $http.interceptors.request.use(function (config) {
-  debugger
   return config;
 }, function (error) {
   return Promise.reject(error);
