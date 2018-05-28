@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <transition name="el-fade-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 

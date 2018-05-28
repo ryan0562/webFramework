@@ -23,4 +23,4 @@ $http.defaults.transformRequest.push(function (data, headers) {
   return data;
 });
 
-Vue.prototype.$http = $http;
+Vue.prototype.$http = $http;//ps:this.$http.post()
