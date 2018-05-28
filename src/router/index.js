@@ -1,12 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from 'src/components/HelloWorld.vue'
 
 Vue.use(Router);
 
 const routes = [{
   path: '/',
-  component: HelloWorld
+  component: () => import('src/page/main.vue'),//有头部跟底部
+  children: [
+    {
+      path: '',
+      name: '首页',
+      component: () => import('src/page/index.vue'),
+    },
+
+  ]
 }];
 
 const router = new Router({
