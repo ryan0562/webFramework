@@ -10,6 +10,9 @@ const routes = [{
     {
       path: '',
       name: '首页',
+      meta: {
+        title: '牛板金理财官网'
+      },
       component: () => import('src/page/index.vue'),
     },
 
@@ -23,7 +26,8 @@ const router = new Router({
 
 //路由切换前做一些处理
 router.beforeEach((to, from, next) => {
-  Vue.prototype.loading = true;
+  Vue.prototype.loading = true;//载入动画
+  document.title = to.meta.title;//页面标题
   next();
 });
 
