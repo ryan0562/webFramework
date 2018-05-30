@@ -6,6 +6,8 @@ import router from './router'
 import 'src/components/axios'//axios 请求/拦截/
 import elementUi from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
+import 'src/common/reset.scss'
+
 Vue.config.productionTip = false;
 
 

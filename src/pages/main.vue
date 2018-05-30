@@ -15,8 +15,8 @@ export default {
     }
   },
   components: {
-    commonHeader: () => import('src/page/header.vue'),
-    commonFooter: () => import('src/page/footer.vue'),
+    commonHeader: () => import('src/pages/header.vue'),
+    commonFooter: () => import('src/pages/footer.vue'),
   },
   created() {
     /*this.$http.post('/api/member/web/mobile/check',{mobile: 15397191444})

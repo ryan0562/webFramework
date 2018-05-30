@@ -5,7 +5,7 @@ Vue.use(Router);
 
 const routes = [{
   path: '/',
-  component: () => import('src/page/main.vue'),//有头部跟底部
+  component: () => import('src/pages/main.vue'),//有头部跟底部
   children: [
     {
       path: '',
@@ -13,7 +13,7 @@ const routes = [{
       meta: {
         title: '牛板金理财官网'
       },
-      component: () => import('src/page/index.vue'),
+      component: () => import('src/pages/index.vue'),
     },
 
   ]
