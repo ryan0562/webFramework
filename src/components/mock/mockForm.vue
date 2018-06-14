@@ -66,12 +66,12 @@
         this.$refs['mockForm'].validate((valid) => {
           if (valid) {
 
-//            let mock = JSON.parse(localStorage.getItem('mock'));
-//            if (!this.id) {
-//              this.id = new Date().getTime();
-//            }
-//            mock.main[this.id] = this.mockForm;
-            localStorage.setItem('mock', JSON.stringify(this.mockForm));
+            let mock = JSON.parse(localStorage.getItem('mock')) || {main:{}};
+            if (!this.id) {
+              this.id = new Date().getTime();
+            }
+            mock.main[this.id] = this.mockForm;
+            localStorage.setItem('mock', JSON.stringify(mock));
 
           } else {
             console.log('error submit!!');
